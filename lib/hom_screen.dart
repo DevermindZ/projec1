@@ -14,9 +14,52 @@ class _MywidgetState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text("HomeScreen"),
       ),
-      drawer: Drawer(),
-      body: const Center(
-        child: Text("Hello from HomeScreen"),
+      
+      drawer: const Drawer(),
+      body: Container(
+        
+        child: Container(
+            decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: Colors.black12,
+              ),
+            ),
+          ),
+          height: 50,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Icon(Icons.home),
+                Text("หน้าหลัก"),
+              ],
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Icon(Icons.newspaper),
+                Text("ข่าวสาร"),
+              ],
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Icon(Icons.info),
+                Text("เกี่ยวกับ"),
+              ],
+            ),
+          ],
+          ),
+        )
+
+
+
+
+
       ),
       bottomNavigationBar: BottomNavigationBar(items: const [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: "หน้าหลัก"),
