@@ -10,8 +10,19 @@ class HomeScreen extends StatefulWidget {
 class _MywidgetState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("Hello"),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("HomeScreen"),
+      ),
+      drawer: Drawer(),
+      body: const Center(
+        child: Text("Hello from HomeScreen"),
+      ),
+      bottomNavigationBar: BottomNavigationBar(items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: "หน้าหลัก"),
+        BottomNavigationBarItem(icon: Icon(Icons.article), label: "ข่าวสาร"),
+        BottomNavigationBarItem(icon: Icon(Icons.info), label: "เกี่ยวกับ"),
+      ]),
     );
   }
 }
